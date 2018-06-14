@@ -26,5 +26,5 @@ Bilateral filter with the ring artifact likelihood
 |---|---|
 |<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/original%2335.png" alt="original" title="original image" width="200" height="200">|<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/Proposed%2335.png" alt="Proposed" title="Proposed image" width="200" height="200">|
 
-#License
+# License
 MIT
