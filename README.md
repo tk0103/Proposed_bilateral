@@ -9,7 +9,7 @@
 
 
 # Proposed_bilateral(EN)
-Eliminate ring artifact  
+Bilateral filter with the ring artifact likelihood 
 * InputPath.txt　　Input data path(str)  
 * CasePath.txt　　Input Case name(str)  
 * load_case_data.m　　load Input data.Excute before using "Proposed_bilateral.m"  
