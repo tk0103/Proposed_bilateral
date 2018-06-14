@@ -16,3 +16,5 @@ Eliminate ring artifact
 * Parameter_config.m　　Input parameter 
 * proposed_bilateral.m　　main sentence of proposed_bilateral  
 * Output.m　　Display images and save data  
+
+<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/original.png" alt="original" title="original image" width="200" height="200">
