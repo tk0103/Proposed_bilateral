@@ -20,8 +20,7 @@ Eliminate ring artifact
 # Image
 |Original #25|Proposed #25|
 |---|---|
-|<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/original%2325.png" alt="original" title="original image" width="200" height="200">|<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/Proposed%2325.png" alt="Proposed" title="Proposed image" width="200" height="200">
-|
+|<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/original%2325.png" alt="original" title="original image" width="200" height="200">|<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/Proposed%2325.png" alt="Proposed" title="Proposed image" width="200" height="200">|
 |Original #35|Proposed #35|
 |---|---|
 |<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/original%2335.png" alt="original" title="original image" width="200" height="200">|<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Images/Proposed%2335.png" alt="Proposed" title="Proposed image" width="200" height="200">
