@@ -1,30 +1,4 @@
-%%
-
-img1 = load_raw('C:\Users\yourb\Desktop\proposed_bilateral_E3.raw','*single');
-img2 = load_raw('C:\Users\yourb\Desktop\E3conventinal_bilateral.raw','*single');
-
-siz = [480,480,80];
-img1 = reshape(img1,siz);
-imagesc(img1(:,:,30)');
-colormap gray
-axis equal tight off
-figure;
-img2 = reshape(img2,siz);
-imagesc(img2(:,:,30)');
-colormap gray
-axis equal tight off
-figure;
-
-diff = abs(img1-img2);
-imagesc(diff(:,:,30)');
-colormap gray
-axis equal tight off
-
-
-
-%%
 %評価プロセス
-%メディアン画像読み出し
 tmp = load_raw('F:\study_M1\NZ\median\E1_median3.raw','double');
 tmp = reshape(tmp,siz);
 
@@ -145,62 +119,62 @@ w = 9.0;
 alpha = 15000;
 beta = 100000;
 
-         k =36;j = 202; i = 152; 
-        %k =36; j = 290; i =326;
-         iMin = max(i-w,1);
-         iMax = min(i+w,dim(1));
-         jMin = max(j-w,1);
-         jMax = min(j+w,dim(2));
-         kMin = max(k-w,1);
-         kMax = min(k+w,dim(3));
-         I = In(iMin:iMax,jMin:jMax,kMin:kMax);
-         O = Out(iMin:iMax,jMin:jMax,kMin:kMax);
-         Thir_tmp = Thir(iMin:iMax,jMin:jMax,kMin:kMax);
-         sig_ddash = powerldash(i,j,k).*alpha + sig_d;
-         sig_rdash = powerldash(i,j,k).*beta + sig_r;
-         
-         Fir = exp(-xyz((iMin:iMax)-i+w+1,(jMin:jMax)-j+w+1,(kMin:kMax)-k+w+1)./(2*sig_ddash.^2));
-         Sec = exp(-(I-In(i,j,k)).^2./(2*sig_rdash.^2));
-         FST = Fir.*Sec.*(Thir_tmp).^2;
-         Out(i,j,k) = sum(FST(:).*I(:))/sum(FST(:));
-         
-         clf
-         subplot(2,3,1);
-         imagesc(imresize(I(:,:,1+w)',4,'nearest'))
-         colormap gray
-         caxis([0,0.6])
-         axis equal tight off
-         rectangle('Position',[9,9,1,1]*4+[0.5,0.5,0,0],'FaceColor','none','EdgeColor','r',...
+k =36;j = 202; i = 152;
+%k =36; j = 290; i =326;
+iMin = max(i-w,1);
+iMax = min(i+w,dim(1));
+jMin = max(j-w,1);
+jMax = min(j+w,dim(2));
+kMin = max(k-w,1);
+kMax = min(k+w,dim(3));
+I = In(iMin:iMax,jMin:jMax,kMin:kMax);
+O = Out(iMin:iMax,jMin:jMax,kMin:kMax);
+Thir_tmp = Thir(iMin:iMax,jMin:jMax,kMin:kMax);
+sig_ddash = powerldash(i,j,k).*alpha + sig_d;
+sig_rdash = powerldash(i,j,k).*beta + sig_r;
+
+Fir = exp(-xyz((iMin:iMax)-i+w+1,(jMin:jMax)-j+w+1,(kMin:kMax)-k+w+1)./(2*sig_ddash.^2));
+Sec = exp(-(I-In(i,j,k)).^2./(2*sig_rdash.^2));
+FST = Fir.*Sec.*(Thir_tmp).^2;
+Out(i,j,k) = sum(FST(:).*I(:))/sum(FST(:));
+
+clf
+subplot(2,3,1);
+imagesc(imresize(I(:,:,1+w)',4,'nearest'))
+colormap gray
+caxis([0,0.6])
+axis equal tight off
+rectangle('Position',[9,9,1,1]*4+[0.5,0.5,0,0],'FaceColor','none','EdgeColor','r',...
     'LineWidth',2)
 
-         subplot(2,3,2);
-         imagesc(imresize(Fir(:,:,1+w)',4,'nearest'))
-         colormap gray
-         caxis([0,1])
-         axis equal tight off
-         
-         subplot(2,3,3);
-         imagesc(imresize(Sec(:,:,1+w)',4,'nearest'))
-         colormap gray
-         axis equal tight off
-         caxis([0,1])
-         
-         subplot(2,3,4);
-         imagesc(imresize(Thir_tmp(:,:,1+w).^4',4,'nearest'))
-         colormap gray
-         axis equal tight off
-         caxis([0,1])
-          
-         subplot(2,3,5);
-         imagesc(imresize(FST(:,:,1+w)',4,'nearest'))
-         colormap gray
-         axis equal tight off
-         
-         subplot(2,3,6);
-         imagesc(imresize(O(:,:,1+w)',4,'nearest'))
-         colormap gray
-         caxis([0,0.6])
-         axis equal tight off
+subplot(2,3,2);
+imagesc(imresize(Fir(:,:,1+w)',4,'nearest'))
+colormap gray
+caxis([0,1])
+axis equal tight off
+
+subplot(2,3,3);
+imagesc(imresize(Sec(:,:,1+w)',4,'nearest'))
+colormap gray
+axis equal tight off
+caxis([0,1])
+
+subplot(2,3,4);
+imagesc(imresize(Thir_tmp(:,:,1+w).^4',4,'nearest'))
+colormap gray
+axis equal tight off
+caxis([0,1])
+
+subplot(2,3,5);
+imagesc(imresize(FST(:,:,1+w)',4,'nearest'))
+colormap gray
+axis equal tight off
+
+subplot(2,3,6);
+imagesc(imresize(O(:,:,1+w)',4,'nearest'))
+colormap gray
+caxis([0,0.6])
+axis equal tight off
          
 %%
 %濃度プロファイル表示

@@ -8,7 +8,6 @@ s = 1.5;
 c = 240.5;
 
 %Proposed method parameter
-In = img_cpu;
 sig_d = 1.0;
 sig_r = 0.6;
 sig_h = 0.005;

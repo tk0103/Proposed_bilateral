@@ -8,7 +8,7 @@ caxis ([0,0.0001])
 
 %%
 %Output
-slice = 40;
+slice = 1;
 subplot(1,2,1);
 imagesc(E1(:,:,slice)');
 colormap gray
@@ -16,7 +16,7 @@ axis equal tight off
 caxis([0,0.5])
 
 subplot(1,2,2);
-imagesc(E2(:,:,slice)');
+imagesc(Out(:,:,slice)');
 colormap gray
 axis equal tight off
 caxis([0,0.5])

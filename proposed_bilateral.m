@@ -58,6 +58,7 @@ ldash = imdilate(ldash,SE);
 
 %%
 %pre calculate
+In = img_cpu;
 [X,Y,Z] = meshgrid(-w:w,-w:w,-w:w);
 xyz = (X.^2+Y.^2+Z.^2);
 dim = size(In);
