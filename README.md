@@ -10,9 +10,9 @@
 
 # Proposed_bilateral(EN)
 Eliminate ring artifact  
-* InputPath.txt Input data path(str)  
-* CasePath.txt Input Case name(str)  
-* load_case_data.m load Input data.Excute before using "Proposed_bilateral.m"  
-* Parameter_config.m Input parameter 
-* proposed_bilateral.m main sentence of proposed_bilateral  
-* Output.m Display images and save data  
+* InputPath.txt  Input data path(str)  
+* CasePath.txt  Input Case name(str)  
+* load_case_data.m  load Input data.Excute before using "Proposed_bilateral.m"  
+* Parameter_config.m  Input parameter 
+* proposed_bilateral.m   main sentence of proposed_bilateral  
+* Output.m  Display images and save data  
