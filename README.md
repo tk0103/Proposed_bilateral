@@ -17,4 +17,6 @@ Eliminate ring artifact
 * proposed_bilateral.m　　main sentence of proposed_bilateral  
 * Output.m　　Display images and save data  
 
+# Image
 <img src="https://github.com/tk0103/Proposed_bilateral/blob/master/original.png" alt="original" title="original image" width="200" height="200">
+<img src="https://github.com/tk0103/Proposed_bilateral/blob/master/Proposed_method.png" alt="Proposed" title="Proposed image" width="200" height="200">
